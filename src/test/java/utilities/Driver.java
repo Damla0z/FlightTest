@@ -10,16 +10,10 @@ import org.openqa.selenium.safari.SafariDriver;
 import java.time.Duration;
 
 public class Driver {
-    /*
-        Bu class'in amaci
-        belirlenen browser'a uygun webDriver objesi olusturmak
-     */
+
 
     private Driver(){
-        // baska class'larin Driver class'indan obje olusturmasini engellemek icin
-        // Singleton pattern kullanilmistir
-        // Singleton pattern class'dan obje olusturulmasini engellemek icin
-        // constructor'i gorunur yapip, erisimini private yapmaya dayanir
+
     }
 
     public static WebDriver driver;
@@ -27,15 +21,7 @@ public class Driver {
     public static WebDriver getDriver(){
 
         String browserTercihi = ConfigReader.getProperty("browser");
-        /*
-            Browser'in sadece chrome olmamasi icin
-            configuration.properties'e browser = firefox
-            secenegi ekledik.
 
-            Orada yazan browser tercihini 22.satirda alip
-            tercihe uygun driver olusturmasi icin
-            bir switch statement kullandik
-         */
 
 
         if (driver == null){
